@@ -1,0 +1,9 @@
+belse:
+            match=str(next_id)
+            name="Unknown"+str(next_id)
+            next_id+=1
+            known_names.append(match)
+            known_faces.append(face_encoding)
+            os.mkdir(f'{KNOWN_FACES_DIR}\{MATCH}')
+            pickle.dump(face_encoding,open(f'{KNOWN_FACES_DIR}\{MATCH}\{MATCH}-{int(time.time())}.pkl',"wb"))    
+            
